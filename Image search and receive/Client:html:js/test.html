@@ -1,0 +1,82 @@
+<DOCTYPE html>
+
+	<html>
+
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<title>Test</title>
+	</head>
+
+	<body>
+
+		<h1></h1>
+		<div id="id01"></div>
+
+			<script>
+				var xmlhttp = new XMLHttpRequest();
+				var url = "https://www.googleapis.com/customsearch/v1?cx=000681453094033258501%3Atuuffghkcmu&q=tesla&searchType=image&key=AIzaSyDA_i3ASjTZm1cz259vdesmlZ71aOsjoaM";
+
+				xmlhttp.onreadystatechange = function() 
+				{
+					console.log("On ready state change");
+  				  	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+  				  	{
+    				    var myArr = JSON.parse(xmlhttp.responseText);
+    				    myFunction(myArr);
+    				}
+				}
+				xmlhttp.open("GET", url, true);
+				xmlhttp.send();
+
+				function myFunction(arr) 
+				{
+    				var items = arr.items;
+    				
+    				for(var i = 0; i < items.length; i++)
+    				{
+    					console.log(items[i].link);
+
+    					$(document).ready(function()
+    					{
+
+  							$('h1').append("<img src=\'" + items[i].link + "\' width=100></img>");
+  							SaveToDisk(items[i].link, this + "/images/thing" + i);
+
+						});
+    				}	
+				}
+
+				function SaveToDisk(fileURL, fileName) 
+				{
+    				// for non-IE
+    				if (!window.ActiveXObject) 
+    				{
+       			    	var save = document.createElement('a');
+        				save.href = fileURL;
+        				save.target = '_blank';
+        				save.download = fileName || 'unknown';
+
+        				var event = document.createEvent('Event');
+        				event.initEvent('click', true, true);
+        				save.dispatchEvent(event);
+        		    	(window.URL || window.webkitURL).revokeObjectURL(save.href);
+    				}
+
+    			// for IE
+    			else if ( !! window.ActiveXObject && document.execCommand)     
+    			{
+        			var _window = window.open(fileURL, '_blank');
+        			_window.document.close();
+
+        			_window.document.execCommand('SaveAs', true, fileName || fileURL);
+
+
+        			_window.close();
+    			}
+			}
+
+
+			</script>
+	</body>
+
+</html>

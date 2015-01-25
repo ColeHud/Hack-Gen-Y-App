@@ -1,0 +1,34 @@
+<DOCTYPE html>
+
+	<html>
+
+	<head>
+		<title>Test Query</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	</head>
+
+	<body>
+
+		<h1>Make Query</h1>
+		<input type="text" placeholder="Query" id="input"></input>
+		<button onClick="newQuery()">Submit</button>
+		<script>
+
+			var newQuery = function()
+			{
+				var query = $('#input').val();
+
+				console.log("Made query");
+
+				xmlhttp=new XMLHttpRequest();
+
+				xmlhttp.open("POST","http://localhost:8000",true);
+				console.log(query);
+				xmlhttp.send(query);
+			}
+			
+		</script>
+	</body>
+
+	</html>
+

@@ -1,0 +1,44 @@
+<manifest alg="2" build="10" opt="true" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" resolutions="1x" timestamp="1422220799129">
+  <folder name="css">
+    <file name="site_global.css" crc="365011649"/>
+    <file name="index.css" crc="3907771103" ref="index"/>
+    <file name="3d-viewer.css" crc="238793782" ref="3d-viewer"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="4164521501" ref="index:3d-viewer"/>
+    <file name="museutils.js" crc="3777594392" ref="index:3d-viewer"/>
+    <file name="webpro.js" crc="474087315" ref="index"/>
+    <file name="form_check.php" crc="306825315" ref="index"/>
+    <file name="form_throttle.php" crc="4293816517" ref="index"/>
+    <file name="form_process.php" crc="109188895" ref="index"/>
+    <file name="form-u245.php" crc="429867304" ref="index"/>
+    <file name="pie.js" crc="3827607177" ref="index:3d-viewer"/>
+    <file name="jquery.watch.js" crc="4144919381" ref="index:3d-viewer"/>
+  </folder>
+  <folder name="images">
+    <file name="u99-3.png" crc="4016646011" ref="index"/>
+    <file name="curly bracket.png" crc="480874442" ref="index:3d-viewer"/>
+    <file name="u115-6.png" crc="527042285" ref="index"/>
+    <file name="u224-6.png" crc="221831104" ref="index"/>
+    <file name="u222-4.png" crc="300223436" ref="index"/>
+    <file name="blank.gif" crc="4208392903" ref="index:3d-viewer"/>
+    <file name="u258.png" crc="414707092" ref="index"/>
+    <file name="u258-ferr.png" crc="4094993474" ref="index"/>
+    <file name="u251-17.png" crc="223774256" ref="index"/>
+    <file name="u251-17-r.png" crc="391167261" ref="index"/>
+    <file name="u251-17-m.png" crc="120593596" ref="index"/>
+    <file name="u251-17-fs.png" crc="4013707078" ref="index"/>
+    <file name="u189.png" crc="3971092560" ref="index"/>
+    <file name="u189-r.png" crc="4206130511" ref="index"/>
+    <file name="u116-7.png" crc="283802508" ref="index"/>
+    <file name="hackgeny copy.png" crc="4165139799" ref="index:3d-viewer"/>
+    <file name="teamname.png" crc="3989891744" ref="index:3d-viewer"/>
+    <file name="u223-4.png" crc="3986295434" ref="3d-viewer"/>
+    <file name="u226-6.png" crc="232068317" ref="3d-viewer"/>
+    <file name="test.gif" crc="3991391687" ref="3d-viewer"/>
+    <file name="u179.png" crc="333577392" ref="3d-viewer"/>
+    <file name="u179-r.png" crc="80261322" ref="3d-viewer"/>
+  </folder>
+  <file name="index.html" crc="261902768" mt="1422217665508" redirect="true"/>
+  <file name="3d-viewer.html" crc="3980844785" mt="1422216828998" redirect="true"/>
+</manifest>
